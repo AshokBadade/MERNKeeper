@@ -5,13 +5,13 @@ const { Schema } = mongoose;
 
 const app = express() ;
 
-// const corsOptions = {
-//     origin: "http://localhost:3000",
-//     optionsSuccessStatus: 200 
-//   };
+const corsOptions = {
+    origin: "http://localhost:3000",
+    optionsSuccessStatus: 200 
+  };
   
 app.use(express.json())
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
   
 
 main().catch(err => console.log(err));
@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
     res.send("hello");
 })
 
-app.get("/get",async(req,res) => {
+app.get("/get",cors(corsOptions),async(req,res) => {
     try{
       const docs = await Notes.find() ;
       res.json(docs);
@@ -48,7 +48,7 @@ app.get("/get",async(req,res) => {
      
    } ) ;
    
-   app.post("/post" ,(req,res) => {
+   app.post("/post" ,cors(corsOptions),(req,res) => {
     const p = new Notes(req.body) ;
     p.save() ;
     res.send("data added") ;
