@@ -74,4 +74,4 @@ app.get("/get",async(req,res) => {
  
 
 
-// app.listen(3002)
+app.listen(3002)
