@@ -16,10 +16,10 @@ MERNKeeper is a full-stack application built using the MERN stack (MongoDB, Expr
 
 <h2>Tech Stack</h2>
 
-1.Frontend: React.js, HTML, CSS
-2.Backend: Node.js, Express.js
-3.Database: MongoDB
-4.State Management: React hooks, useState
+1.Frontend: React.js, HTML, CSS .
+2.Backend: Node.js, Express.js  .
+3.Database: MongoDB .
+4.State Management: React hooks, useState  .
 
 
 
